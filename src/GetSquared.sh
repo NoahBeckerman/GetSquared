@@ -3,7 +3,7 @@ DATE=`date +%Y-%m-%d`
 localPATH=`pwd`                          # path of current directory
 seperator='---------------'
 #for d in */; do
-for d in {1..2}; do
+for d in {1..4}; do
   d=`echo $d | sed s#/##`
   echo $seperator"Checking Status of" $d$seperator
   number=$RANDOM
@@ -13,7 +13,7 @@ for d in {1..2}; do
   git -C $localPATH/ commit -m 'Commit Cheat Updated'
   git -C $localPATH/ push
 
-  sleep 10  # or sleep +3m
+  sleep 2  # or sleep +3m
   
   echo -e '\n'
 done
