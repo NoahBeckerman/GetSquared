@@ -8,9 +8,9 @@ for d in {1..2}; do
 
   number=$RANDOM
 
-  echo "Printing [ " .  $number . "] to file: " .  > $localPATH/GetSquared.html
+  echo "Printing [ "$number "] to file: ${localPATH/GetSquared.html}"
   git -C $localPATH/ add . 
-  git -C $localPATH/ commit -m 'GetSquared: ${number}'
+  git -C $localPATH/ commit -m "GetSquared: "$number
   git -C $localPATH/ push
 
   sleep 5  # or sleep +3m
