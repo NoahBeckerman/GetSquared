@@ -1,16 +1,16 @@
 #!/bin/bash
 DATE=`date +%Y-%m-%d`
-localPATH=`pwd`                          # path of current directory
-seperator='---------------'
-#for d in */; do
-for d in {1..100}; do
-  d=`echo $d | sed s#/##`
-  echo $seperator"Checking Status of" $d$seperator
+localPATH=`pwd`               
+           # path of current directory
+seperator='-------------------------'
+
+for d in {1..2}; do
+
   number=$RANDOM
 
-  echo $number > $localPATH/GetSquared.html
+  echo "Printing [ " .  $number . "] to file: " .  > $localPATH/GetSquared.html
   git -C $localPATH/ add . 
-  git -C $localPATH/ commit -m 'Commit Cheat Updated'
+  git -C $localPATH/ commit -m 'GetSquared: ${number}'
   git -C $localPATH/ push
 
   sleep 5  # or sleep +3m
