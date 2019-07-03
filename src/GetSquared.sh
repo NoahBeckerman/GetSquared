@@ -9,6 +9,8 @@ for d in {1..2}; do
   number=$RANDOM
 
   echo "Printing [ "$number "] to file: ${localPATH/GetSquared.html}"
+  echo $number > $localPATH/GetSquared.html
+  
   git -C $localPATH/ add . 
   git -C $localPATH/ commit -m "GetSquared: "$number
   git -C $localPATH/ push
