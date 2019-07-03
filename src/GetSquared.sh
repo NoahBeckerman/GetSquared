@@ -13,7 +13,7 @@ for d in {1..100}; do
   git -C $localPATH/ commit -m 'Commit Cheat Updated'
   git -C $localPATH/ push
 
-  sleep 10  # or sleep +3m
+  sleep 5  # or sleep +3m
   
   echo -e '\n'
 done
