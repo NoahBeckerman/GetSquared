@@ -6,9 +6,6 @@ seperator='-------------------------'
 echo "How many commits today?"
 read commits
 
-echo  "Pushing [ "$commits" ] to the repo"
-echo -e '\n'
-
 for d in {1..$commits}; do
 
   number=$RANDOM
