@@ -3,10 +3,13 @@ DATE=`date +%Y-%m-%d`
 localPATH=`pwd`               
            # path of current directory
 seperator='-------------------------'
-echo "How many commits today?"
-read commits
+#echo "How many commits today?"
+#read commits
 
-for d in {1..$commits}; do
+#echo  "Pushing [ "$commits" ] to the repo"
+#echo -e '\n'
+
+for d in {1..200}; do
 
   number=$RANDOM
 
@@ -17,7 +20,7 @@ for d in {1..$commits}; do
   git -C $localPATH/ commit -m "GetSquared: "$number
   git -C $localPATH/ push
 
-  sleep 5  # or sleep +3m
+  sleep 1  # or sleep +3m
   
   echo -e '\n'
 done
