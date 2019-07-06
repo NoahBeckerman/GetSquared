@@ -3,14 +3,13 @@ DATE=`date +%Y-%m-%d`
 localPATH=`pwd`               
            # path of current directory
 seperator='-------------------------'
-$test = 3 ;
-#echo "How many commits today?"
-#read commits
+echo "How many commits today?"
+read commits
 
-#echo  "Pushing [ "$commits" ] to the repo"
-#echo -e '\n'
+echo  "Pushing [ "$commits" ] to the repo"
+echo -e '\n'
 
-for d in {1..$test}
+for c in {1 .. $commits}
 do
 
   number=$RANDOM
