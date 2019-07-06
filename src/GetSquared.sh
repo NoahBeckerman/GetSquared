@@ -31,6 +31,6 @@ do
   
   echo -e '\n'
 
-echo "You have successfully pushed [ "$commits" ] commits to the repo [ "$mother_repo" ]"
+#echo "You have successfully pushed [ "$commits" ] commits to the repo [ "$mother_repo" ]"
 
 done
