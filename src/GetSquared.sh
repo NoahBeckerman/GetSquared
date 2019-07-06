@@ -12,8 +12,7 @@ echo -e '\n'
 echo  "Pushing [ "$commits" ] commits to the repo [ "$mother_repo" ]"
 echo -e '\n'
 
-for commit in {1 .. $commits}
-do
+for commit in {1 .. $commits}; do
 
   number=$RANDOM
 
@@ -28,6 +27,6 @@ do
   
   echo -e '\n'
 
-done
+  done
 
 echo "You have successfully pushed [ "$commits" ] commits to the repo [ "$mother_repo" ]"
