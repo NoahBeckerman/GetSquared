@@ -10,7 +10,8 @@ COMMITS = 3
 #echo  "Pushing [ "$commits" ] to the repo"
 #echo -e '\n'
 
-for d in {1..$COMMITS}; do
+for d in {1..$COMMITS}
+do
 
   number=$RANDOM
 
