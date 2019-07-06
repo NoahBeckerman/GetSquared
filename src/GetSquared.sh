@@ -35,3 +35,7 @@ do
 
 echo "You have successfully pushed [ "$commits" ] commits to the repo [ "$mother_repo" ]"
 done
+
+
+$commits=""
+$timer=""
