@@ -1,4 +1,3 @@
-#!/bin/bash
 DATE=`date +%Y-%m-%d`
 localPATH=`pwd` 
 mother_repo='http://www.github.com/NoahBeckerman/GetSquared'              
