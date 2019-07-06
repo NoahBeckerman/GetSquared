@@ -3,7 +3,7 @@ DATE=`date +%Y-%m-%d`
 localPATH=`pwd`               
            # path of current directory
 seperator='-------------------------'
-COMMITS = 2
+COMMITS = 3
 #echo "How many commits today?"
 #read commits
 
