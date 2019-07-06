@@ -1,12 +1,18 @@
 #!/bin/bash
 DATE=`date +%Y-%m-%d`
-localPATH=`pwd`               
-           # path of current directory
-seperator='-------------------------'
+localPATH=`pwd` 
+repoPATH='HTTP://www.github.com/NoahBeckerman/GetSquared'              
+
+
 echo "How many commits today?"
 read commits
+echo -e '\n'
 
-echo  "Pushing [ "$commits" ] to the repo"
+echo "How many seconds for each push? \n (Recomended is 5 seconds/ Can't go below 2 seconds)"
+read timer
+echo -e '\n'
+
+echo  "Pushing [ "$commits" ] commits to the repo [ "$repoPATH" ]"
 echo -e '\n'
 
 for c in {1 .. $commits}
@@ -21,7 +27,7 @@ do
   git -C $localPATH/ commit -m "GetSquared: "$number
   git -C $localPATH/ push
 
-  sleep 1  # or sleep +3m
+  sleep timer  # or sleep +3m
   
   echo -e '\n'
 done
