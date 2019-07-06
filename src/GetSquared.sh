@@ -1,18 +1,19 @@
 #!/bin/bash
 DATE=`date +%Y-%m-%d`
 localPATH=`pwd` 
-repoPATH='HTTP://www.github.com/NoahBeckerman/GetSquared'              
+mother_repo='http://www.github.com/NoahBeckerman/GetSquared'              
 
 
 echo "How many commits today?"
 read commits
 echo -e '\n'
 
-echo "How many seconds for each push? \n (Recomended is 5 seconds/ Can't go below 2 seconds)"
+echo "How many seconds for each push?"
+echo "(Recomended is 5 seconds/ Can't go below 2 seconds)"
 read timer
 echo -e '\n'
 
-echo  "Pushing [ "$commits" ] commits to the repo [ "$repoPATH" ]"
+echo  "Pushing [ "$commits" ] commits to the repo [ "$mother_repo" ]"
 echo -e '\n'
 
 for c in {1 .. $commits}
@@ -30,4 +31,7 @@ do
   sleep timer  # or sleep +3m
   
   echo -e '\n'
+
+
+echo "You have successfully pushed [ "$commits" ] commits to the repo [ "$mother_repo" ]"
 done
