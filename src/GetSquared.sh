@@ -1,6 +1,10 @@
 DATE=`date +%Y-%m-%d`
 localPATH=`pwd` 
-mother_repo='http://www.github.com/NoahBeckerman/GetSquared'              
+mother_repo='http://www.github.com/NoahBeckerman/GetSquared'
+total_repo_commits=git rev-list --all --count              
+
+echo 'Total ammount of commits made to repo: ' $total_repo_commits
+echo -e '\n'
 
 read -p 'How many commits today? ' commits
 echo -e '\n'
