@@ -2,17 +2,17 @@ DATE=`date +%Y-%m-%d`
 localPATH=`pwd` 
 mother_repo='http://www.github.com/NoahBeckerman/GetSquared'              
 
-read -p 'How many commits today? ' commits
+read -p 'How many commits today? ' test
 echo -e '\n'
 
 read -p 'How many seconds to sleep? ' timer
 echo "(Recomended is 5 seconds/ Can't go below 2 seconds)"
 echo -e '\n'
 
-echo  "Pushing ["$commits"] commits to the repo ["$mother_repo"]"
+echo  "Pushing ["$test"] commits to the repo ["$mother_repo"]"
 echo -e '\n'
 
-for x in {seq 1 $commits}; do
+for x in {seq 1 $test}; do
 
   number=$RANDOM
 
