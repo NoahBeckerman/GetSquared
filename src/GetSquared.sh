@@ -12,7 +12,7 @@ echo -e '\n'
 echo  "Pushing ["$commits"] commits to the repo ["$mother_repo"]"
 echo -e '\n'
 
-for x in {seq 1 100}; do
+for x in {seq 1 $commits}; do
 
   number=$RANDOM
 
@@ -23,7 +23,7 @@ for x in {seq 1 100}; do
   git -C $localPATH/ commit -m "GetSquared: "$number
   git -C $localPATH/ push
 
-  sleep 2  # or sleep +3m
+  sleep timer  # or sleep +3m
   
   echo -e '\n'
 
