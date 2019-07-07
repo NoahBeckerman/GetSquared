@@ -9,10 +9,10 @@ read -p 'How many seconds to sleep? ' timer
 echo "(Recomended is 5 seconds/ Can't go below 2 seconds)"
 echo -e '\n'
 
-echo  "Pushing [ "$commits" ] commits to the repo [ "$mother_repo" ]"
+echo  "Pushing ["$commits"] commits to the repo ["$mother_repo"]"
 echo -e '\n'
 
-for x in {seq 1 $commits}; do
+for x in {seq 1 100}; do
 
   number=$RANDOM
 
@@ -23,10 +23,10 @@ for x in {seq 1 $commits}; do
   git -C $localPATH/ commit -m "GetSquared: "$number
   git -C $localPATH/ push
 
-  sleep timer  # or sleep +3m
+  sleep 2  # or sleep +3m
   
   echo -e '\n'
 
   done
 
-echo "You have successfully pushed [ "$commits" ] commits to the repo [ "$mother_repo" ]"
+echo "You have successfully pushed ["$commits"] commits to the repo ["$mother_repo"]"
