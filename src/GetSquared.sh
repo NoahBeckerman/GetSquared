@@ -12,8 +12,7 @@ echo -e '\n'
 echo  "Pushing ["$commits"] commits to the repo ["$mother_repo"]"
 echo -e '\n'
 
-for x in {seq 1 $commits}
- do
+for x in $(seq 1 $commits); do
 
   number=$RANDOM
 
