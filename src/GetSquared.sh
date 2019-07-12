@@ -21,8 +21,9 @@ timer_query(){
 }
 
 forked_users(){
-	curl -s 'https://api.github.com/repos/NoahBeckerman/GetSquared/forks' | \
-    python3 -c "import sys, json; print(json.load(sys.stdin)['owner']['login'])"
+	va=$(python3 -c GetForkedUsers.py 2>&1)
+	echo 'Total ammount of forked users from repo: ' $va
+	echo -e '\n'
 }
 
 commits_query
