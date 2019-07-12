@@ -12,7 +12,8 @@ commits_query(){
 }
 
 timer_query(){
-	read -p 'How many seconds to sleep? (Recomended is 5 seconds/ Can not go below 2 seconds)' timer
+	echo '(Recomended is 5 seconds/ Can not go below 2 seconds)'
+	read -p 'How many seconds to sleep?' timer
 	echo -e '\n'
 }
 
