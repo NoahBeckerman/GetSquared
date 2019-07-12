@@ -2,6 +2,9 @@ DATE=`date +%Y-%m-%d`
 localPATH=`pwd` 
 mother_repo='http://www.github.com/NoahBeckerman/GetSquared'
 total_repo_commits=$(git rev-list --all --count)
+re='^[0-9]+$'
+min_value=0
+min_timer=0
 
 commits_query(){
 	read -p 'How many commits today? ' commits
@@ -14,13 +17,26 @@ timer_query(){
 }
 
 commits_query
-timer_query
-
-
-re='^[0-9]+$'
 if ! [[ $commits =~ $re ]] ; then
-   echo "ERROR: Please enter a integer" >&2; exit 1
+   echo "ERROR: Please enter a integer for total commits" >&2; commits_query
 fi
+
+if [ "$commits" -lt "$min_value" ] ; then
+   echo "ERROR: Please enter a value greater than 0" >&2; commits_query
+fi
+
+
+timer_query
+if ! [[ $timer =~ $re ]] ; then
+   echo "ERROR: Please enter a integer for timer" >&2; timer_query
+fi
+
+if [ "$timer" -lt "$mi_timer" ] ; then
+   echo "ERROR: Please enter a value greater than 2" >&2; timer_query
+fi
+
+
+
 
 echo 'Total ammount of commits made to repo: ' $total_repo_commits
 echo -e '\n'
