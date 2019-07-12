@@ -18,7 +18,7 @@ timer_query(){
 
 commits_query
 if ! [[ $commits =~ $re ]] ; then
-   echo "ERROR: Please enter a integer for total commits" >&2; commits_query
+   echo "ERROR: Please enter a possitive integer for total commits" >&2; commits_query
 fi
 
 if [ "$commits" -lt "$min_value" ] ; then
@@ -28,10 +28,10 @@ fi
 
 timer_query
 if ! [[ $timer =~ $re ]] ; then
-   echo "ERROR: Please enter a integer for timer" >&2; timer_query
+   echo "ERROR: Please enter a possitive integer for timer" >&2; timer_query
 fi
 
-if [ "$timer" -lt "$mi_timer" ] ; then
+if [ "$timer" -lt "$min_timer" ] ; then
    echo "ERROR: Please enter a value greater than 2" >&2; timer_query
 fi
 
