@@ -5,8 +5,12 @@ total_repo_commits=$(git rev-list --all --count)
 re='^[0-9]+$'
 min_value=0
 min_timer=2
+test= `curl -s 'https://api.github.com/repos/NoahBeckerman/GetSquared/forks'`
 
 commits_query(){
+	forked_users
+	echo 'Total ammount of commits made to repo: ' $total_repo_commits
+	echo -e '\n'
 	read -p 'How many commits today? ' commits
 	echo -e '\n'
 }
@@ -15,6 +19,10 @@ timer_query(){
 	echo '(Recomended is 5 seconds/ Can not go below 2 seconds)'
 	read -p 'How many seconds to sleep?' timer
 	echo -e '\n'
+}
+
+forked_users(){
+    python3 -c "import sys, json; print(json.load(test)['owner']['login'])"
 }
 
 commits_query
@@ -40,11 +48,6 @@ if [ "$timer" -lt "$min_timer" ] ; then
    echo "ERROR: Please enter a value greater than 2" >&2; timer_query
 fi
 
-
-
-
-echo 'Total ammount of commits made to repo: ' $total_repo_commits
-echo -e '\n'
 
 
 echo  "Pushing ["$commits"] commits to the repo ["$mother_repo"]"
