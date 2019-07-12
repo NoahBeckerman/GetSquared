@@ -4,7 +4,7 @@ mother_repo='http://www.github.com/NoahBeckerman/GetSquared'
 total_repo_commits=$(git rev-list --all --count)
 re='^[0-9]+$'
 min_value=0
-min_timer=0
+min_timer=2
 
 commits_query(){
 	read -p 'How many commits today? ' commits
