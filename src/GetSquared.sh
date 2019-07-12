@@ -5,7 +5,6 @@ total_repo_commits=$(git rev-list --all --count)
 re='^[0-9]+$'
 min_value=0
 min_timer=2
-test= `curl -s 'https://api.github.com/repos/NoahBeckerman/GetSquared/forks'`
 
 commits_query(){
 	forked_users
@@ -22,7 +21,8 @@ timer_query(){
 }
 
 forked_users(){
-    python3 -c "import sys, json; print(json.load(test)['owner']['login'])"
+	curl -s 'https://api.github.com/repos/NoahBeckerman/GetSquared/forks' | \
+    python3 -c "import sys, json; print(json.load(sys.stdin)['owner']['login'])"
 }
 
 commits_query
