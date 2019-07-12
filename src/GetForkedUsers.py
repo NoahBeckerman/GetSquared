@@ -6,6 +6,6 @@ json_req = gh_session.get('https://api.github.com/repos/NoahBeckerman/GetSquared
 users = []
 
 for x in range(len(json_req.json())):
-	users.append(json_req.json()[x]['owner']['login'])
+	users.append(json_req.json()[1]['owner']['login'])
 
 exit(users)

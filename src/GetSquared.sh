@@ -21,7 +21,7 @@ timer_query(){
 }
 
 forked_users(){
-	va=$(python3 -c GetForkedUsers.py 2>&1)
+	va=$(python3 GetForkedUsers.py 2>&1)
 	echo 'Total ammount of forked users from repo: ' $va
 	echo -e '\n'
 }
