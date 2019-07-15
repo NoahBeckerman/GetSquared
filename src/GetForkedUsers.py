@@ -21,8 +21,8 @@ users = []
 
 for x in range(len(json_req.json())):
     users.append(json_req.json()[x]['owner']['login'])
-    if not os.path.exists('./' + [x]):
-        os.makedirs('./' + [x])
-    git.Git('./' + [x]).clone('https://github.com/' + [x] + '/GetSquared')
+    # if not os.path.exists('./' + [x]):
+    #     os.makedirs('./' + [x])
+    # git.Git('./' + [x]).clone('https://github.com/' + [x] + '/GetSquared')
 
 exit(users)
