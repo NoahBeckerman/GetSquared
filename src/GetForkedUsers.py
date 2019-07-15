@@ -8,9 +8,6 @@ import pandas as pd
 import getpass
 import git
 
-github_clone_url = 'https://github.com/[x]/GetSquared'
-fork_dir = ('./' + [x])
-
 gh_session = requests.Session()
 
 username = getpass.getpass(prompt='Username: ', stream=None)
@@ -26,6 +23,6 @@ for x in range(len(json_req.json())):
     users.append(json_req.json()[x]['owner']['login'])
     if not os.path.exists(fork_dir):
         os.makedirs(fork_dir)
-    git.Git(fork_dir).clone(github_clone_url)
+    git.Git('./' + [x]).clone('https://github.com/' + [x] + '/GetSquared')
 
 exit(users)
