@@ -1,4 +1,7 @@
-import sys, json, requests, pandas as pd, getpass
+import os, sys, json, requests, pandas as pd, getpass, git
+
+github_clone_url = 'https://github.com/[x]/GetSquared'
+fork_dir = ('./' + [x])
 
 gh_session = requests.Session()
 
@@ -13,5 +16,9 @@ users = []
 
 for x in range(len(json_req.json())):
 	users.append(json_req.json()[x]['owner']['login'])
+
+	if not os.path.exists(fork_dir):
+    	os.makedirs(fork_dir)
+		git.Git(fork_dir).clone(github_clone_url)
 
 exit(users)
