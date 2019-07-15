@@ -70,8 +70,8 @@ for x in $(seq 1 $commits); do
 
   sleep timer  # or sleep +3m
   
-  echo -e '\n'
   echo -e "Commit Number ["$x"] out of ["$commits"]" 
+  echo -e '\n'
 
   done
 
