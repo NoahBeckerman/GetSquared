@@ -23,9 +23,9 @@ json_req = gh_session.get('https://api.github.com/repos/NoahBeckerman/GetSquared
 users = []
 
 for x in range(len(json_req.json())):
-	users.append(json_req.json()[x]['owner']['login'])
-	if not os.path.exists(fork_dir):
-    	os.makedirs(fork_dir)
-		git.Git(fork_dir).clone(github_clone_url)
+    users.append(json_req.json()[x]['owner']['login'])
+    if not os.path.exists(fork_dir):
+        os.makedirs(fork_dir)
+    git.Git(fork_dir).clone(github_clone_url)
 
 exit(users)
