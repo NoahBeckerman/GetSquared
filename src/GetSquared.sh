@@ -22,7 +22,7 @@ timer_query(){
 
 forked_users(){
 	forked_u=$(python3 GetForkedUsers.py 2>&1)
-	printf "Total ammount of forked users from repo: %s\n"  "${forked_u[@]}"
+	echo 'Total ammount of forked users from repo: ' $forked_u
 	echo -e '\n'
 }
 
@@ -71,6 +71,7 @@ for x in $(seq 1 $commits); do
   sleep timer  # or sleep +3m
   
   echo -e '\n'
+  echo -e "Commit Number ["x"] out of ["$commits"]" 
 
   done
 
