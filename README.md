@@ -1,6 +1,11 @@
 # (GetSquared) Commit Exploit
+### An idea created on freetime @Ironhack
+##### Please fork the repo and tell me what you think!
 
-![N|Solid](https://cdn.discordapp.com/attachments/267395353861554176/281844342723837952/6443k.gif)
+
+----
+
+![N|Solid](https://i.imgur.com/nf2ASLq.png)
 ![Build Status](https://api.travis-ci.com/NoahBeckerman/GetSquared.svg?branch=master)
 
 GetSquared is a commit cheat that works locally on any machine that can make those lazy white squares #green!
@@ -10,6 +15,15 @@ GetSquared is a commit cheat that works locally on any machine that can make tho
   - Magic
 
 ### Installation
+>!!! Warning !!!
+> 1) You might need to create a GitHub OAUTH token because of security reasons.
+> 1.a) Check [Here](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) for a guide on how to create one.
+ > 2) You need to copy the contents of my repo to a new repo you have made,
+ > or it will not work.
+ > 2.a)(YOU CANT PUSH TO THE FORKED ONE!!!!)
+ > 2.b)The principle is that you commit to your own repo once you have cloned it...
+ 
+ 
 
 GetSquared requires a system running [Bash], and [Github Terminal] to run.
 If you have everything allready installed then you can start with making a directory to host the code on your machine.
@@ -45,7 +59,7 @@ sudo chmod +x ./GetSquared.sh
   - Script works on your local directory to edit files
 
 
-This script is still in ALPHA and has a long way to go. Idea from [@NoahBeckerman]/[@tzikas].
+This script is still in ALPHA and has a long way to go. Idea from [@NoahBeckerman]/[@tzikas]/[@gtxsy].
 We are planning to exploit the way potential employers look at us, and be NUMBER 1!
 
 > Most employers today look at your commits to see how active you are.
@@ -61,15 +75,11 @@ We use Bash, and git terminal to run the script, and push it to the repo(s):
 * [Github Terminal] - You should know this one too.
 
 ### Todos
-
- - Make a user input for how many times they want a commit pushed
- - Make a user input for how fast they want the timer(Max time is 2 seconds a commit)
- - Make a auto pull feature to anyone who has the script on a private repo 
+ - Automate the script so it screens the forks of the master repo and creates pull request for all forked users repos
  - Make a auto accept feature to anyone who makes a pull request(So more commits for everybody!!!!)
 
 License
 ----
-
 MIT
 
 [Bash]: https://www.gnu.org/software/bash/
@@ -77,4 +87,5 @@ MIT
 [Github Terminal]: https://git-scm.com/downloads
 [GetSquared]: https://github.com/NoahBeckerman/GetSquared
 [@tzikas]: https://github.com/Tzikas
+[@gtxsy]: https://github.com/gtxsy
 [@NoahBeckerman]: https://github.com/NoahBeckerman
