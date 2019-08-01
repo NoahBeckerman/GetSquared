@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "*** START"
+echo "*** Getting Users *** "
 
 # Get inputs; -n somename for name input
 while getopts :n: opt
@@ -17,4 +17,5 @@ echo "the name is $name"
 # Create directory, if it does not already exist
 mkdir -p "../users/${name}"
 
-echo "*** END"
+echo "*** END *** "
+echo ""
